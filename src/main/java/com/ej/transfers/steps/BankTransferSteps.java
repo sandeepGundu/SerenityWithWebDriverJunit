@@ -10,31 +10,31 @@ import org.junit.Assert;
 public class BankTransferSteps extends BaseSteps
 {
 
-    @Step//("User logs into the banking application")
+    @Step
     public void login() {
-        loginPage.open(); // Assuming there's a method to open the login page
-        loginPage.enterUsername("testuser"); // Placeholder username
-        loginPage.enterPassword("testpass"); // Placeholder password
-        loginPage.clickLoginButton(); // Method to click the login button
+        loginPage.open();
+        loginPage.enterUsername("testuser");
+        loginPage.enterPassword("testpass");
+        loginPage.clickLoginButton();
     }
 
-    @Step//("User selects transfer type {0}")
+    @Step
     public void selectTransferType(String transferType) {
-        transferPage.openTransferPage(); // Navigate to the transfer page
-        transferPage.chooseTransferType(transferType); // Method to select the transfer type
+        transferPage.openTransferPage();
+        transferPage.chooseTransferType(transferType);
     }
 
-    @Step//("User enters transfer details and submits")
+    @Step
     public void enterTransferDetailsAndSubmit(double amount, String recipientAccount) {
-        transferPage.enterAmount(amount); // Method to enter the amount
-        transferPage.enterRecipientAccount(recipientAccount); // Method to enter the recipient's account number
-        transferPage.clickSubmitTransfer(); // Method to submit the transfer
+        transferPage.enterAmount(amount);
+        transferPage.enterRecipientAccount(recipientAccount);
+        transferPage.clickSubmitTransfer();
     }
 
-    @Step//("Submit the transfer")
+    @Step
     public void submitTransfer() {
-        transferPage.confirmTransfer(); // Assuming there's a confirmation step
-        String status = transferPage.getTransferStatus(); // Get the status of the transfer
+        transferPage.confirmTransfer();
+        String status = transferPage.getTransferStatus();
         Assert.assertEquals("Transfer should be successful", "successful", status);
     }
 }
