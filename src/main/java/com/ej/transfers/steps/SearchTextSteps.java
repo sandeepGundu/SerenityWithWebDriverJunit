@@ -9,7 +9,6 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class SearchTextSteps extends BaseSteps
 {
-
     @Step
     public void navigateToSearchPage()
     {

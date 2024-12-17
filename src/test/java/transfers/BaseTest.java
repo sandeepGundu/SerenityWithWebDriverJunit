@@ -1,5 +1,6 @@
 package transfers;
 
+import com.ej.transfers.steps.BankTransferSteps;
 import com.ej.transfers.steps.SearchTextSteps;
 import com.ej.transfers.pages.NavigateActions;
 import com.ej.transfers.pages.SearchActions;
@@ -24,6 +25,9 @@ public class BaseTest {
 
     @Steps
     SearchTextSteps searchTextSteps;
+
+    @Steps
+    BankTransferSteps bankTransferSteps;
 
     public static String configPrivateKey() {
         String accessToken = System.getProperty("token");
