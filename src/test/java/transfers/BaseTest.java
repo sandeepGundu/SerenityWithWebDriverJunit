@@ -1,9 +1,9 @@
-package Accounts.AppTests;
+package transfers;
 
-import Accounts.Steps.SearchTextSteps;
-import Accounts.UIPages.NavigateActions;
-import Accounts.UIPages.SearchActions;
-import Accounts.UIPages.SearchResultSidebar;
+import com.ej.transfers.steps.SearchTextSteps;
+import com.ej.transfers.pages.NavigateActions;
+import com.ej.transfers.pages.SearchActions;
+import com.ej.transfers.pages.SearchResultSidebar;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.annotations.Managed;
 import org.openqa.selenium.WebDriver;

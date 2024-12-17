@@ -1,19 +1,16 @@
 plugins {
-    id "net.serenity-bdd.serenity-gradle-plugin" version "4.2.7"
+    id "net.serenity-bdd.serenity-gradle-plugin" version "4.2.8"
     id 'java'
 }
 
 defaultTasks 'clean', 'test', 'aggregate'
 
-group = 'com.ej.ai.elitea.code'
+group = 'com.ej'
 version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
-
-sourceCompatibility = 21
-targetCompatibility = 21
 
 ext {
     slf4jVersion = '1.7.7'
@@ -26,7 +23,7 @@ ext {
 
 
 dependencies {
-    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
@@ -56,4 +53,5 @@ serenity {
     testRoot="src/test/java"
 }
 
+gradle.startParameter.continueOnFailure = true
 test.finalizedBy(aggregate)

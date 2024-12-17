@@ -1,10 +1,7 @@
-package Accounts.UIPages;
+package com.ej.transfers.pages;
 
-import net.serenitybdd.core.annotations.findby.By;
-import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.steps.UIInteractions;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 
 public class SearchActions extends UIInteractions
 {

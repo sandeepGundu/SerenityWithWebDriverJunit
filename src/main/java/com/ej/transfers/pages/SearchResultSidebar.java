@@ -1,4 +1,4 @@
-package Accounts.UIPages;
+package com.ej.transfers.pages;
 
 import net.serenitybdd.core.pages.PageComponent;
 import org.openqa.selenium.WebElement;

@@ -1,20 +1,14 @@
-package Accounts.Steps;
+package com.ej.transfers.steps;
 
-import Accounts.UIPages.NavigateActions;
-import Accounts.UIPages.SearchActions;
-import Accounts.UIPages.SearchResultSidebar;
+
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.core.Serenity;
-import org.junit.Assert;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
-public class SearchTextSteps
+public class SearchTextSteps extends BaseSteps
 {
-    private NavigateActions navigateActions;
-    private SearchActions searchActions;
-    private SearchResultSidebar searchResultSidebar;
 
     @Step
     public void navigateToSearchPage()
