@@ -13,6 +13,7 @@ public class FundTransferTest extends BaseTest
         bankTransferSteps.login();
         bankTransferSteps.selectTransferType("Intra-Bank");
         bankTransferSteps.enterTransferDetailsAndSubmit(10000, "12345678");
+        bankTransferSteps.submitTransfer();
     }
 
 }
