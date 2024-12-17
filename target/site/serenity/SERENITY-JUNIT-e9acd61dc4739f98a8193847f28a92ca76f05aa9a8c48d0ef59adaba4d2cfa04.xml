@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Accounts.AppTests.WhenSearchingByKeywordTest" skipped="0" tests="1" time="22.24" timestamp="2024-12-16 08:33:09"><testcase classname="Accounts.AppTests.WhenSearchingByKeywordTest" name="The keyword should appear in the results sidebar"/></testsuite>
