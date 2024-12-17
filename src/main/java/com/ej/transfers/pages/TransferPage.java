@@ -29,6 +29,9 @@ public class TransferPage extends PageObject
     @FindBy(id = "transferStatus")
     private WebElementFacade transferStatus;
 
+    @FindBy(id = "errorMessage")
+    private WebElementFacade errorMessage;
+
     public void openTransferPage() {
         transferPageButton.click();
     }
@@ -55,5 +58,9 @@ public class TransferPage extends PageObject
 
     public String getTransferStatus() {
         return transferStatus.getText();
+    }
+
+    public String getErrorMessage() {
+        return errorMessage.getText();
     }
 }

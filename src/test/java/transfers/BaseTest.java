@@ -1,6 +1,8 @@
 package transfers;
 
 import com.ej.transfers.steps.BankTransferSteps;
+import com.ej.transfers.steps.LoginSteps;
+import com.ej.transfers.steps.LogoutSteps;
 import com.ej.transfers.steps.SearchTextSteps;
 import com.ej.transfers.pages.NavigateActions;
 import com.ej.transfers.pages.SearchActions;
@@ -29,12 +31,10 @@ public class BaseTest {
     @Steps
     BankTransferSteps bankTransferSteps;
 
-    public static String configPrivateKey() {
-        String accessToken = System.getProperty("token");
+    @Steps
+    LoginSteps loginSteps;
 
-        /*if (accessToken == null) {
-            return config().getProperty("token");
-        }*/
-        return accessToken;
-    }
+    @Steps
+    LogoutSteps logoutSteps;
+
 }

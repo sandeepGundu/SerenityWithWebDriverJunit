@@ -9,6 +9,6 @@ public class BaseSteps {
     public SearchResultSidebar searchResultSidebar;
     public LoginPage loginPage;
     public TransferPage transferPage;
-
+    public LogoutPage logoutPage;
 
 }
