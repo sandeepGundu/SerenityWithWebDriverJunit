@@ -1,0 +1,45 @@
+classDiagram
+    class LoginPage {
+        +clickLoginButton()
+        +enterPassword(String password)
+        +enterUsername(String username)
+        -WebElementFacade loginButton
+        -WebElementFacade passwordField
+        -WebElementFacade usernameField
+    }
+    class LogoutPage {
+        +clickLogoutButton()
+        +confirmLogout()
+        +isLogoutConfirmed()
+        -WebElementFacade confirmLogoutButton
+        -WebElementFacade logoutButton
+        -WebElementFacade logoutConfirmation
+    }
+    class TransferPage {
+        +chooseTransferType(String transferType)
+        +clickSubmitTransfer()
+        +confirmTransfer()
+        +enterAmount(double amount)
+        +enterRecipientAccount(String recipientAccount)
+        +openTransferPage()
+        +getErrorMessage()
+        +getTransferStatus()
+        -WebElementFacade amountField
+        -WebElementFacade confirmTransferButton
+        -WebElementFacade errorMessage
+        -WebElementFacade recipientAccountField
+        -WebElementFacade submitTransferButton
+        -WebElementFacade transferPageButton
+        -WebElementFacade transferStatus
+        -WebElementFacade transferTypeDropdown
+    }
+    class SearchActions {
+        +byKeyword(String keyword)
+    }
+    class SearchResultSidebar {
+        +heading()
+        -WebElement searchResultText
+    }
+    class NavigateActions {
+        +toTheDuckDuckGoSearchPage()
+    }

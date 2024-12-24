@@ -1,0 +1,25 @@
+classDiagram
+    BaseSteps --|> BankTransferSteps : extends
+    BaseSteps --|> LoginSteps : extends
+    BaseSteps --|> LogoutSteps : extends
+    BaseSteps --|> SearchTextSteps : extends
+    BaseSteps : +LoginPage loginPage
+    BaseSteps : +LogoutPage logoutPage
+    BaseSteps : +NavigateActions navigateActions
+    BaseSteps : +SearchActions searchActions
+    BaseSteps : +SearchResultSidebar searchResultSidebar
+    BaseSteps : +TransferPage transferPage
+    BankTransferSteps : +void enterTransferDetailsAndSubmit(double, String)
+    BankTransferSteps : +void selectTransferType(String)
+    BankTransferSteps : +void submitTransfer()
+    BankTransferSteps : +void theTransferShouldBe(String)
+    BankTransferSteps : +void userEntersTransferDetailsWithInsufficientFunds(double, String)
+    BankTransferSteps : +void userShouldSeeAnErrorMessage(String)
+    LoginSteps : +void userIsLoggedIntoTheBankingApplication()
+    LogoutSteps : +void LogoutFromApplication()
+    LogoutSteps : +void userClicksOnTheLogoutButton()
+    LogoutSteps : +void userConfirmsTheLogout()
+    LogoutSteps : +void userShouldBeSuccessfullyLoggedOut()
+    SearchTextSteps : +void navigateToSearchPage()
+    SearchTextSteps : +void typeSearchText()
+    SearchTextSteps : +void verifySearchText()
