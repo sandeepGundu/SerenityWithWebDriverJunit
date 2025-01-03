@@ -1,0 +1,27 @@
+classDiagram
+    class BaseSteps {
+        LoginPage loginPage
+        LogoutPage logoutPage
+        TransferPage transferPage
+    }
+    class BankTransferSteps {
+        enterTransferDetailsAndSubmit(double amount, String recipientAccount)
+        selectTransferType(String transferType)
+        submitTransfer()
+        theTransferShouldBe(String expectedResult)
+        userEntersTransferDetailsWithInsufficientFunds(double amount, String recipientAccount)
+        userShouldSeeAnErrorMessage(String errorMessage)
+    }
+    class LoginSteps {
+        userIsLoggedIntoTheBankingApplication()
+    }
+    class LogoutSteps {
+        userClicksOnTheLogoutButton()
+        userConfirmsTheLogout()
+        userShouldBeSuccessfullyLoggedOut()
+        LogoutFromApplication()
+    }
+    
+    BankTransferSteps --|> BaseSteps : extends
+    LoginSteps --|> BaseSteps : extends
+    LogoutSteps --|> BaseSteps : extends

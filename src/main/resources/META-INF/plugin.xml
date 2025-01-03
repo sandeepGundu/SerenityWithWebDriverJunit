@@ -1,0 +1,5 @@
+<actions>
+    <action id="MyPlugin.ParseAction" class="com.ej.transfers.pages.LoginPage" text="Parse Java Code" description="Parses Java code in the current project">
+        <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+    </action>
+</actions>

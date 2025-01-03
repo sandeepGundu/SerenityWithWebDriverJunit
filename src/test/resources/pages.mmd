@@ -1,0 +1,36 @@
+classDiagram
+    class LoginPage {
+        -WebElementFacade loginButton
+        -WebElementFacade usernameField
+        -WebElementFacade passwordField
+        +void enterUsername(String username)
+        +void enterPassword(String password)
+        +void clickLoginButton()
+    }
+    class LogoutPage {
+        -WebElementFacade logoutButton
+        -WebElementFacade confirmLogoutButton
+        -WebElementFacade logoutConfirmation
+        +void clickLogoutButton()
+        +void confirmLogout()
+        +boolean isLogoutConfirmed()
+    }
+    class TransferPage {
+        -WebElementFacade amountField
+        -WebElementFacade recipientAccountField
+        -WebElementFacade transferTypeDropdown
+        -WebElementFacade submitTransferButton
+        -WebElementFacade confirmTransferButton
+        -WebElementFacade transferStatus
+        -WebElementFacade errorMessage
+        +void enterAmount(double amount)
+        +void enterRecipientAccount(String recipientAccount)
+        +void chooseTransferType(String transferType)
+        +void clickSubmitTransfer()
+        +void confirmTransfer()
+        +String getTransferStatus()
+        +String getErrorMessage()
+    }
+    TransferPage --|> PageObject : extends
+    LoginPage --|> PageObject : extends
+    LogoutPage --|> PageObject : extends

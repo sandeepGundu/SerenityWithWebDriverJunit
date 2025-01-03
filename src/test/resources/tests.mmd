@@ -1,0 +1,13 @@
+classDiagram
+    class BaseTest {
+        -WebDriver browser
+        -BankTransferSteps bankTransferSteps
+        -LoginSteps loginSteps
+        -LogoutSteps logoutSteps
+    }
+    class FundTransferTest {
+        +fundTransfer_IntraBank()
+        +failure_fundTransfer_InterBank()
+    }
+
+    FundTransferTest --|> BaseTest : extends
