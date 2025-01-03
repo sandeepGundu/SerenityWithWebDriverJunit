@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends PageObject
 {
-
     @FindBy(id = "username")
     private WebElementFacade usernameField;
 
