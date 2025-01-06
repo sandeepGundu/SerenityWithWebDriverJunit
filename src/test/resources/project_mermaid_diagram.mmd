@@ -1,0 +1,78 @@
+classDiagram
+class LoginSteps {
+  void userIsLoggedIntoTheBankingApplication()
+}
+LoginSteps <|-- BaseSteps
+class FundTransferTest {
+  void fundTransfer_IntraBank()
+  void failure_fundTransfer_InterBank()
+}
+FundTransferTest <|-- BaseTest
+class LoginPage {
+  WebElementFacade usernameField
+  WebElementFacade passwordField
+  WebElementFacade loginButton
+  void enterUsername(String username)
+  void enterPassword(String password)
+  void clickLoginButton()
+}
+LoginPage <|-- PageObject
+class BankTransferSteps {
+  void selectTransferType(String transferType)
+  void enterTransferDetailsAndSubmit(double amount, String recipientAccount)
+  void submitTransfer()
+  void userEntersTransferDetailsWithInsufficientFunds(double amount, String recipientAccount)
+  void theTransferShouldBe(String expectedResult)
+  void userShouldSeeAnErrorMessage(String errorMessage)
+}
+BankTransferSteps <|-- BaseSteps
+class LogoutSteps {
+  void LogoutFromApplication()
+  void userClicksOnTheLogoutButton()
+  void userConfirmsTheLogout()
+  void userShouldBeSuccessfullyLoggedOut()
+}
+LogoutSteps <|-- BaseSteps
+class TransferPage {
+  WebElementFacade transferPageButton
+  WebElementFacade transferTypeDropdown
+  WebElementFacade amountField
+  WebElementFacade recipientAccountField
+  WebElementFacade submitTransferButton
+  WebElementFacade confirmTransferButton
+  WebElementFacade transferStatus
+  WebElementFacade errorMessage
+  void openTransferPage()
+  void chooseTransferType(String transferType)
+  void enterAmount(double amount)
+  void enterRecipientAccount(String recipientAccount)
+  void clickSubmitTransfer()
+  void confirmTransfer()
+  String getTransferStatus()
+  String getErrorMessage()
+}
+TransferPage <|-- PageObject
+class BaseSteps {
+  LoginPage loginPage
+  TransferPage transferPage
+  LogoutPage logoutPage
+}
+class LogoutPage {
+  WebElementFacade logoutButton
+  WebElementFacade logoutConfirmation
+  WebElementFacade confirmLogoutButton
+  void clickLogoutButton()
+  void confirmLogout()
+  boolean isLogoutConfirmed()
+}
+LogoutPage <|-- PageObject
+class MermaidDiagramGenerator {
+  void main(String[] args)
+  void saveToFile(String data, String path)
+}
+class BaseTest {
+  WebDriver browser
+  BankTransferSteps bankTransferSteps
+  LoginSteps loginSteps
+  LogoutSteps logoutSteps
+}

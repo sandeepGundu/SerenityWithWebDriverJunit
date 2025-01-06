@@ -33,7 +33,8 @@ dependencies {
             "org.assertj:assertj-core:${assertJVersion}",
             "org.projectlombok:lombok:${lombokVersion}",
             "ch.qos.logback:logback-classic:${logbackVersion}",
-            "net.serenity-bdd:serenity-rest-assured:${serenityCoreVersion}"
+            "net.serenity-bdd:serenity-rest-assured:${serenityCoreVersion}",
+            "com.github.javaparser:javaparser-core:3.23.1"
 
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
